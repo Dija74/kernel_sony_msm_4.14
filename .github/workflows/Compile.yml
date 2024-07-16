@@ -45,7 +45,7 @@ jobs:
         CROSS_COMPILE: ${{ env.CROSS_COMPILE }}
         CROSS_COMPILE_ARM32: ${{ env.CROSS_COMPILE_ARM32 }}
       run: |
-        make CC=clang O=out ARCH=arm64 CROSS_COMPILE=${CROSS_COMPILE} CROSS_COMPILE_ARM32=${CROSS_COMPILE_ARM32} lineage-msm8998-yoshino-poplar_defconfig
+        make CC=clang O=out ARCH=arm64 CROSS_COMPILE=${CROSS_COMPILE} CROSS_COMPILE_ARM32=${CROSS_COMPILE_ARM32} aosp_yoshino_poplar_defconfig
         make CC=clang O=out ARCH=arm64 CROSS_COMPILE=${CROSS_COMPILE} CROSS_COMPILE_ARM32=${CROSS_COMPILE_ARM32} -j$(nproc --all)
 
     - name: List output directory
